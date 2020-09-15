@@ -6,5 +6,5 @@ def sign_in_and_play
 end
 
 def attack_player_one 
-  click_link 'Attack'
+  click_link 'Player two: Attack'
 end

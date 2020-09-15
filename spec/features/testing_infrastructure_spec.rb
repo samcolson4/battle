@@ -20,3 +20,11 @@ feature "I can attack player 2" do
     expect(page).to have_content "Ollie attacked Sam"
   end
 end
+
+feature "Removes two HP from a player when attacked" do
+  scenario "Player two attacks player one, removing 2HP" do
+    sign_in_and_play
+    attack_player_one
+    expect($player_one.hp).to eq(Player::HP - Player::ATTACK_VALUE)
+  end
+end
